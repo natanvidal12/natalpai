@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    background: #050505;
+    color: #e0e0e0;
+    font-family: "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    padding: 40px;
+    animation: fadeIn 2s ease;
+}
+
+.line {
+    opacity: 0;
+    margin: 20px 0;
+    transition: opacity 1s ease;
+    letter-spacing: 0.5px;
+}
+
+.active {
+    opacity: 1;
+}
+
+button {
+    margin-top: 40px;
+    background: none;
+    border: 1px solid #555;
+    color: #e0e0e0;
+    padding: 10px 25px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #999;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
