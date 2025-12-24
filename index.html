@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Registro #001</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natal Mágico Interativo</title>
+    <link rel="stylesheet" href="styles.css">
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>🎄 Natal 2025 🎄</h1>
+            <p class="subtitle">Feito com carinho pra quem sempre esteve presente</p>
+        </header>
 
-<div class="container" id="content">
-    <div class="line active">INICIALIZANDO REGISTRO...</div>
-    <button onclick="next()">ACESSAR</button>
+        <div class="countdown">
+            <h2>Contagem Regressiva para o Natal</h2>
+            <div class="timer" id="timer">
+                <div class="time-unit">
+                    <div class="time-number" id="days">0</div>
+                    <div class="time-label">Dias</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-number" id="hours">0</div>
+                    <div class="time-label">Horas</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-number" id="minutes">0</div>
+                    <div class="time-label">Minutos</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-number" id="seconds">0</div>
+                    <div class="time-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="interactive-section">
+            <div class="card" onclick="changeTreeColor()">
+                <h3>🌟 Árvore Mágica</h3>
+                <p>Clique para mudar as cores da árvore de Natal e ver a mágica acontecer!</p>
+            </div>
+            <div class="card" onclick="addSnowflakes()">
+                <h3>❄️ Nevar Mais</h3>
+                <p>Adicione mais flocos de neve e crie uma verdadeira nevasca natalina!</p>
+            </div>
+            <div class="card" onclick="playSound()">
+                <h3>🔔 Sinos de Natal</h3>
+                <p>Toque os sinos mágicos do Papai Noel e espalhe alegria!</p>
+            </div>
+        </div>
+
+        <div class="christmas-tree" id="tree">
+            <div class="tree-part"></div>
+            <div class="tree-part"></div>
+            <div class="tree-part"></div>
+            <div class="tree-trunk"></div>
+        </div>
+        
+
+        <div class="message-box">
+            <h2 style="color: #ffd700; margin-bottom: 20px;">✨ Deixe Seu Desejo de Natal ✨</h2>
+            <textarea id="wishInput" placeholder="Escreva seu desejo de Natal aqui..."></textarea>
+            <button class="btn" onclick="addWish()">Enviar Desejo 🌟</button>
+            <div class="wishes-display" id="wishesDisplay"></div>
+        </div>
+    </div>
+
+    <div class="music-player" onclick="toggleMusic()" title="Música de Natal">
+        <span class="music-icon">🎵</span>
+    </div>
+    <div class="overlay" id="overlayCarta">
+    <div class="carta">
+        <h2>Para você</h2>
+        <p>
+            Tudo começa com uma base forte.<br>
+            Nem sempre foi fácil,<br>
+            mas sempre foi firme.<br><br>
+            Obrigado por tudo.
+        </p>
+        <button onclick="fecharCarta()">Fechar</button>
+    </div>
 </div>
-<script src="script.js"></script>
+
+    
+    <script src="script.js"></script>
 </body>
 </html>
